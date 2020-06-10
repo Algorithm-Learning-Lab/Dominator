@@ -1,0 +1,21 @@
+def Dominator (A) :
+  n = len(A)
+  B = [0] * n
+  king = -1
+  for k in range (n) :
+    count = 0
+    for i in range (n) :
+      if (A[i] == A[k]) :
+        B[count] = i
+        count += 1
+    if (count > n // 2) :
+      king = A[k]
+      break
+      break
+  if king == -1 :
+    return king
+  else :
+    return B
+
+
+print(Dominator([4,4,4,4,2,2,2]))
